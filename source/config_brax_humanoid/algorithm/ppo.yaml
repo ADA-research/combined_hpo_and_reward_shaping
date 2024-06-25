@@ -1,0 +1,31 @@
+agent_class: PPO
+eval: False
+return_weight: 1
+stability_weight: 0
+num_timesteps: 50000000
+policy_model: MlpPolicy
+backend: generalized
+reward_shape:
+  forward_reward_weight: 1.25
+  ctrl_cost_weight: 0.1
+  healthy_reward: 5.0
+model_kwargs:
+  seed: 0
+  num_evals: 0
+  episode_length: 1000
+  reward_scaling: 1.0
+  normalize_observations: True
+  action_repeat: 1
+  unroll_length: 10
+  num_minibatches: 32
+  num_updates_per_batch: 8
+  discounting: 0.03  # because we use 1 minus gamma in algorithm
+  gae_lambda: 0.95
+  learning_rate: 3e-4
+  entropy_cost: 1e-3
+  vf_cost: 0.5
+  clipping_epsilon: 0.3
+  num_envs: 2048
+  batch_size: 1024
+  num_eval_envs: 128
+  deterministic_eval: True

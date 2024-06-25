@@ -1,0 +1,28 @@
+agent_class: SAC
+eval: False
+return_weight: 1
+stability_weight: 0
+num_timesteps: 5242880
+policy_model: MlpPolicy
+backend: generalized
+reward_shape:
+  forward_reward_weight: 1.25
+  ctrl_cost_weight: 0.1
+  healthy_reward: 5.0
+  reward_scaling: 5.0  # todo: change this to final default value
+model_kwargs:
+  seed: 0
+  num_evals: 0
+  episode_length: 1000
+  normalize_observations: True
+  action_repeat: 1
+  discounting: 0.01  # because we use 1 minus gamma in algorithm
+  tau: 0.005
+  learning_rate: 3e-4
+  num_envs: 64
+  min_replay_size: 8192
+  max_replay_size: 1048576
+  grad_updates_per_step: 8
+  batch_size: 1024
+  num_eval_envs: 128
+  deterministic_eval: True

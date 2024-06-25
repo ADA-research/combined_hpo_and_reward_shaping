@@ -1,0 +1,42 @@
+random_reward_weights: False
+hyperparameters:
+  algorithm.model_kwargs.learning_rate:
+    type: uniform_float
+    lower: 0.000001
+    upper: 0.01
+    log: true
+    q: null
+  algorithm.model_kwargs.discounting:
+    type: uniform_float
+    lower: 0.001
+    upper: 0.2
+    log: true
+    q: null
+  algorithm.model_kwargs.gae_lambda:
+    type: uniform_float
+    lower: 0.8
+    upper: 1.0
+    log: false
+    q: null
+  algorithm.model_kwargs.clipping_epsilon:
+    type: uniform_float
+    lower: 0.1
+    upper: 0.4
+    log: false
+    q: null
+  algorithm.model_kwargs.entropy_cost:
+    type: uniform_float
+    lower: 0.0
+    upper: 0.1
+    log: false
+    q: null
+  algorithm.model_kwargs.vf_cost:
+    type: uniform_float
+    lower: 0.3
+    upper: 0.7
+    log: false
+    q: null
+  algorithm.model_kwargs.batch_size:
+    type: categorical
+    choices: [512, 1024, 2048]
+    q: null

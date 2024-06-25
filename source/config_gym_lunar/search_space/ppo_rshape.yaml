@@ -1,0 +1,26 @@
+random_reward_weights: False
+hyperparameters:
+  algorithm.reward_shape.distance_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.velocity_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.angle_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.leg_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null

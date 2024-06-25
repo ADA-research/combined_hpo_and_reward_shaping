@@ -1,0 +1,27 @@
+defaults:
+  - _self_
+  - algorithm: sac
+  - search_space: None
+  - override hydra/sweeper: DEHB
+
+hydra:
+  sweeper:
+    dehb_kwargs:
+      mutation_factor: 0.2
+      max_budget: ${algorithm.num_timesteps}
+      min_budget: 500000
+      deepcave: false
+      seeds: [5, 6, 7]
+    search_space: ${search_space}
+    total_brackets: 30
+    budget_variable: algorithm.num_timesteps
+  run:
+    dir: ./dehb_runs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ./dehb_runs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+env_name: brax_humanoid
+load: false
+save: false
+reward_curves: false
+seed: 0

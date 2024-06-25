@@ -1,0 +1,25 @@
+agent_class: PPO
+eval: False
+return_weight: 1
+stability_weight: 0
+total_timesteps: 1000000
+policy_model: MlpPolicy
+num_eval_envs: 128
+num_envs: 16
+reward_shape:
+  distance_rew_weight: 1.0
+  angle_rew_weight: 1.0
+  velocity_rew_weight: 1.0
+  leg_rew_weight: 1.0
+model_kwargs:
+  seed: 0
+  normalize_advantage: True
+  learning_rate: 3e-4
+  n_steps: 1024
+  batch_size: 64
+  n_epochs: 4
+  gamma: 0.001  # because we use 1 minus gamma in algorithm
+  gae_lambda: 0.98
+  ent_coef: 0.01
+  vf_coef: 0.5
+  clip_range: 0.2

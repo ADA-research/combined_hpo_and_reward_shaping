@@ -1,0 +1,20 @@
+random_reward_weights: False
+hyperparameters:
+  algorithm.reward_shape.forward_reward_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.healthy_reward:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.ctrl_cost_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 1.0
+    log: false
+    q: null

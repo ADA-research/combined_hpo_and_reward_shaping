@@ -1,0 +1,48 @@
+random_reward_weights: True
+hyperparameters:
+  algorithm.model_kwargs.learning_rate:
+    type: uniform_float
+    lower: 0.000001
+    upper: 0.001
+    log: true
+    q: null
+  algorithm.model_kwargs.gamma:
+    type: uniform_float
+    lower: 0.001
+    upper: 0.2
+    log: true
+    q: null
+  algorithm.model_kwargs.batch_size:
+    type: categorical
+    choices: [128, 256, 512]
+    q: null
+  algorithm.model_kwargs.tau:
+    type: uniform_float
+    lower: 0.001
+    upper: 0.1
+    log: true
+    q: null
+  algorithm.reward_shape.distance_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.velocity_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.angle_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.leg_rew_weight:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null

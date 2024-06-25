@@ -1,0 +1,43 @@
+random_reward_weights: False
+hyperparameters:
+  algorithm.reward_shape.distance_multiplier:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_shape.distance_th_multiplier:
+    type: uniform_float
+    lower: 0.0
+    upper: 10.0
+    log: false
+    q: null
+  algorithm.reward_sape.wipe_contact_reward:
+    type: uniform_float
+    lower: 0.0
+    upper: 1.0
+    log: false
+    q: null
+  algorithm.reward_shape.unit_wiped_reward:
+    type: uniform_float
+    lower: 20.0  # needs to be larger than 10.0 to ensure that distance_multiplier smaller than total reward
+    upper: 100.0
+    log: false
+    q: null
+  algorithm.reward_shape.arm_limit_collision_penalty:
+    type: uniform_float
+    lower: -100.0
+    upper: 0.0
+    q: null
+  algorithm.reward_shape.excess_force_penalty_mul:
+    type: uniform_float
+    lower: 0.0
+    upper: 1.0
+    log: false
+    q: null
+  algorithm.reward_shape.ee_accel_penalty:
+    type: uniform_float
+    lower: 0.0
+    upper: 1.0
+    log: false
+    q: null

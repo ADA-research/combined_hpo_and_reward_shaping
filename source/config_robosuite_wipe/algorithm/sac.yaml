@@ -1,0 +1,27 @@
+agent_class: SAC
+eval: False
+return_weight: 1
+stability_weight: 0
+total_timesteps: 1250000
+policy_model: MlpPolicy
+num_envs: 5
+reward_shape:
+  distance_multiplier: 5.0
+  distance_th_multiplier: 5.0
+  wipe_contact_reward: 0.01
+  unit_wiped_reward: 50.0
+  arm_limit_collision_penalty: -10.0
+  excess_force_penalty_mul: 0.05
+  ee_accel_penalty: 0.0
+model_kwargs:
+  seed: 0
+  learning_rate: 0.0003
+  batch_size: 256
+  tau: 0.005
+  gamma: 0.01  # because we use 1 minus gamma in algorithm
+  learning_starts: 100
+  buffer_size: 1000000
+  train_freq: 1
+  gradient_steps: 2
+  use_sde: False
+  sde_sample_freq: -1
