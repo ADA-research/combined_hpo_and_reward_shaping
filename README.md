@@ -17,7 +17,7 @@ Directory `source` provides the source code and parameter configurations used in
 - `dehb_suite_env`: Contains the reinforcement learning training implementation for each suite and environment. These implementations are utilised by the black-box optimisation algorithm DEHB for assessing the performance of a parameter configuration.
 - `envs`: Includes helper functions and scripts for the LunarLander and Wipe environments to compute the task objectives and to allow the recording of agent behaviour.
 
-The conda environment used in our trainings is given in `environment.yml`. For installing the Hydra sweepers consider [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl) together with the Hydra docs [https://hydra.cc](https://hydra.cc).
+The conda environment used for our trainings is given in `environment.yml`. For installing the Hydra sweepers consider [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl) together with the Hydra docs [https://hydra.cc](https://hydra.cc).
 
 You can use the Hydra command line to simply run an experiment for PPO and SAC. For example, to run Gymnasium LunarLander with hyperparameter optimisation, simply run:
 ```bash
