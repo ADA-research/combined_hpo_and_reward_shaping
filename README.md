@@ -1,3 +1,13 @@
+<p align="center">
+    <a href="./logo.png#gh-light-mode-only">
+        <img src="./logo.png#gh-light-mode-only" alt="HPO+RSHAPE Logo" width="80%"/>
+    </a>
+    <a href="./logo.png#gh-dark-mode-only">
+        <img src="./logo.png#gh-dark-mode-only" alt="HPO+RSHAPE Logo" width="80%"/>
+    </a>
+</p>
+
+
 # Repository for the RLC Submission: Combined Optimisation of Hyperparameters and Reward Shape
 
 This repository contains supplementary material for our research on combined optimisation of hyperparameters and reward shape in reinforcement learning. Below is an overview of the contents:
