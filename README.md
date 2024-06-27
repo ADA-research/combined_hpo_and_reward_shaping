@@ -10,7 +10,7 @@ This repository contains supplementary material for our research on combined opt
 
 ## Source Files and Parameter Configurations for the Optimisation Experiments
 
-Directory `source` provides the source code and parameter configurations used in our optimisation experiments across the suites (e.g., Brax, Gym, and Robosuite) and environments (e.g., LunarLander, Ant, Humanoid, and Wipe). For the optimisation experiments with DEHB, we utilised the DEHB implementation as a Hydra sweeper, which can be found in this repository: [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl).
+In the directory `source` we provide the source code and parameter configurations used in our optimisation experiments across the suites (i.e. Brax, Gym, and Robosuite) and environments (i.e. LunarLander, Ant, Humanoid, and Wipe). For the optimisation experiments with DEHB, we utilised the DEHB implementation as a Hydra sweeper, which can be found in this repository: [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl).
 
 - `config_suite_env`: Contains configuration files for the optimisation experiments for each suite and environment. Each directory includes the following two subdirectories:
   - `algorithm`: Provides the baseline's parameter configurations for SAC and PPO, including hyperparameters and reward shapes.
@@ -20,15 +20,15 @@ Directory `source` provides the source code and parameter configurations used in
 
 The conda environment used for our trainings is given in `environment.yml`. For installing the Hydra sweepers consider [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl) together with the Hydra docs [https://hydra.cc](https://hydra.cc).
 
-You can use the Hydra command line to simply run an experiment for PPO and SAC. For example, to run Gymnasium LunarLander with hyperparameter optimisation, simply run:
+You can use the Hydra command line to simply run an experiment for PPO and SAC. For example, to run Gymnasium LunarLander with hyperparameter and reward weight optimisation, simply run:
 ```bash
-python3 dehb_gym_lunar/ppo_hydra.py search_space=ppo_hpo
-python3 dehb_gym_lunar/sac_hydra.py search_space=sac_hpo
+python3 dehb_gym_lunar/ppo_hydra.py search_space=ppo_hpo_rshape
+python3 dehb_gym_lunar/sac_hydra.py search_space=sac_hpo_rshape
 ```
-The alternative search spaces in our experiments can be selected from `config_gym_lunar/search_spaces`. To perform a multi-objective optimisation with weighting the return and the stability in the final objective, simply run:
+The alternative search spaces of our experiments can be selected from `config_gym_lunar/search_spaces`. To perform a multi-objective optimisation with weighting the return and the stability in the final objective, simply run:
 ```bash
-python3 dehb_gym_lunar/ppo_hydra.py search_space=ppo_hpo python3 sac_hydra.py search_space=sac_hpo_rshape algorithm.return_weight=0.5 algorithm.stability_weight=0.5
-python3 dehb_gym_lunar/sac_hydra.py search_space=sac_hpo python3 sac_hydra.py search_space=sac_hpo_rshape algorithm.return_weight=0.5 algorithm.stability_weight=0.5
+python3 dehb_gym_lunar/ppo_hydra.py search_space=ppo_hpo_rshape python3 sac_hydra.py search_space=sac_hpo_rshape algorithm.return_weight=0.5 algorithm.stability_weight=0.5
+python3 dehb_gym_lunar/sac_hydra.py search_space=sac_hpo_rshape python3 sac_hydra.py search_space=sac_hpo_rshape algorithm.return_weight=0.5 algorithm.stability_weight=0.5
 ```
 
 
