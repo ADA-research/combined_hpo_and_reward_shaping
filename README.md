@@ -1,9 +1,9 @@
 <p align="center">
     <a href="./.logo.png#gh-light-mode-only">
-        <img src="./.logo.png#gh-light-mode-only" alt="HPO+RSHAPE Logo" width="80%"/>
+        <img src="./.logo.png#gh-light-mode-only" alt="HPO+RSHAPE Logo" width="60%"/>
     </a>
     <a href="./.logo.png#gh-dark-mode-only">
-        <img src="./.logo.png#gh-dark-mode-only" alt="HPO+RSHAPE Logo" width="80%"/>
+        <img src="./.logo.png#gh-dark-mode-only" alt="HPO+RSHAPE Logo" width="60%"/>
     </a>
 </p>
 
