@@ -10,15 +10,16 @@
 </p>
 
 
-This repository contains supplementary material for our research on the combined optimisation of hyperparameters and reward shape in reinforcement learning. Below is an overview of the contents:
+This repository contains supplementary material for our [RLC 2024 paper](https://arxiv.org/abs/2406.18293) on the combined optimisation of hyperparameters and reward shape in reinforcement learning. Below is an overview of the repository's contents:
 
 - `source`: Contains the source code used for running our optimisation experiments, along with their corresponding configurations.
 - `experimental_results/landscape_analysis`: Includes the landscape plots from the paper for the landscape analysis and the raw results of the performed reinforcement learning trainings. 
 - `experimental_results/optimisation_experiments`: Includes the performance plots of our different experiments and datasets for incumbent performance and evaluation results of each experiment. 
 - `behaviour_comparison`: Features videos comparing the behaviour of our optimised agents to baseline agents.
 
+---
 
-## Source Files and Parameter Configurations for the Optimisation Experiments 🔬
+## Source Files and Parameter Configurations for the Optimisation Experiments
 
 In the directory `source` we provide the source code and parameter configurations used in our optimisation experiments across the suites (i.e. Brax, Gym, and Robosuite) and environments (i.e. LunarLander, Ant, Humanoid, and Wipe). For the optimisation experiments with DEHB, we utilised the DEHB implementation as a Hydra sweeper, which can be found in this repository: [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl).
 
@@ -30,7 +31,7 @@ In the directory `source` we provide the source code and parameter configuration
 
 The conda environment used for our trainings is given in `environment.yml`. For installing the Hydra sweepers consider [https://github.com/facebookresearch/how-to-autorl](https://github.com/facebookresearch/how-to-autorl) together with the Hydra docs [https://hydra.cc](https://hydra.cc).
 
-You can use the Hydra command line to run an experiment for PPO and SAC simply. For example, to run Gymnasium LunarLander with hyperparameter and reward weight optimisation, run:
+You can use the Hydra command line to run an experiment for PPO and SAC. For example, to optimise Gymnasium LunarLander with hyperparameter and reward weight optimisation, run:
 ```bash
 python3 dehb_gym_lunar/ppo_hydra.py search_space=ppo_hpo_rshape
 python3 dehb_gym_lunar/sac_hydra.py search_space=sac_hpo_rshape
@@ -51,9 +52,9 @@ The `behaviour_comparison` directory contains videos comparing the behaviour of 
 
 We give the landscape experimental results in the directory `experimental_results/landscape_analysis`. The landscapes in the PDF files are similar to the ones found in the paper's appendix.
 
-- `landscape_algmin.pdf`: Landscapes of the various hyperparameter and reward weight pairs, with the blue line indicating the optimal hyperparameter value for each reward weight and the black dots showing the configurations found in the optimisation experiments.
-- `landscape_rewmin.pdf`: Landscapes of the various hyperparameter and reward weight pairs, with the blue line indicating the optimal reward weight for each hyperparameter value and the black dots showing the configurations found in the optimisation experiments.
-- `hyperparameter_reward-weight.csv`: CSV files containing the raw data of the landscapes, thus containing the PPO reinforcement learning results for each configuration pair and training seed.
+- `landscape_algmin.pdf`: Landscapes of the various hyperparameter and reward weight pairs, with the blue line indicating the optimal hyperparameter value for each reward weight and the black dots showing the configurations found in our optimisation experiments.
+- `landscape_rewmin.pdf`: Landscapes of the various hyperparameter and reward weight pairs, with the blue line indicating the optimal reward weight for each hyperparameter value and the black dots showing the configurations found in our optimisation experiments.
+- `hyperparameter_reward-weight.csv`: CSV files containing the raw data of the landscapes, thus containing the PPO LunarLander training t results for each configuration pair and training seed.
 
 
 ## Optimisation Experiment Results
