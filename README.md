@@ -74,9 +74,11 @@ We give the different results of our optimisation experiments for PPO and SAC in
 @misc{DieEtAl24,
   author    = {Julian Dierkes and Emma Cramer and Holger H. Hoos and Sebastian Trimpe},
   title     = {Combining Automated Optimisation of Hyperparameters and Reward Shape},
-  journal   = {Reinforcement Learning Journal},
+  journal   = {In Proceedings of the 1st Reinforcement Learning Journal},
   volume    = 1, 
   year      = {2024},
+  pages     = {1--9},
   url = {https://github.com/ADA-research/combined_hpo_and_reward_shaping},
+}
 ```
 
